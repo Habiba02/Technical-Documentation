@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>HTML and CSS Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#HTML"
+            >HTML</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS"
+            >CSS</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Images_and_Figures"
+            >Images and Figures</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Metadata_in_the_Head"
+            >Metadata in the Head</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Creating_Forms"
+            >Creating Forms</a
+          >
+        </li>
+        
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <h2>HTML</h2>
+          <p>
+            HTML stands for Hyper Text Markup Language. HTML is the standard
+            markup language for creating Web pages, it describes the structure
+            of a Web page. HTML consists of a series of elements which tell the
+            browser how to display the content
+          </p>
+          <h2>CSS</h2>
+          <p>
+            CSS stands for Cascading Style Sheets.CSS is the language we use to
+            style a Web page. CSS describes how HTML elements are to be
+            displayed on screen, paper, or in other media and It can control the
+            layout of multiple web pages all at once.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="HTML">
+        <header>HTML</header>
+        <article>
+          <ol>
+            <li>
+             <h3>Bold and italics</h3> 
+              <p>
+               <h4>There are two elements for bold and two elements for italic</h4> 
+
+                there are two different reasons for using italics here verbally emphasized and visually distinguished.
+                 We want the browser to know when things should be verbally emphasized, versus when they're simply visually distinguished.
+                 We can convey this in HTML by using two different elements. 
+                 The I element is used to apply to only visual italics, while the em element is used to put emphasis on something. 
+                 We aren't just typesetting when we're choosing elements like these. 
+                 We're conveying semantic meaning, a human meaning. 
+                 We can see that visually, they look exactly the same. But don't be tricked, they're not the same. 
+                 It's important that we don't just get lazy and only use one of these for everything. 
+                 They potentially create very different results for anyone listening to the content.
+                 There are also two elements we can use to mark something as bold. 
+                 The strong element conveys importance, seriousness, urgency like emphasis, it conveys meaning.
+                The B element is like the I element. It's generic, neutral, it doesn't mean anything. 
+                It just gives us a way to mark something so it can be styled as bold. There's no implication of an alternative voice or mood. 
+              </p>
+            </li>
+            <li>
+                <h3>Code, pre, and br</h3>
+                <p>
+                    Sometimes you want to put some code on a webpage. 
+                    Let's say you're writing an article about making a webpage or you want to tell people about some of the syntax encode. 
+                     So I'll use the code element.   It switches to a monospaced font and of curse we can make this look however it is that we want it to look. 
+                     Code, by default, is an inline element.
+                    Next, let's look at the br and pre elements. 
+                    Normally, we can type all of the spaces and return characters that we want in our code and the browser is going to ignore them all.
+                    We just want a line break at the end of each one of these lines, something that the browser will respect. 
+                    That is what the br element is for, it gives us a way to break a line. 
+                     Br is just a simple, single tag, there's no opening or closing to it, there's nothing that goes inside of it, it just marks a place for a line break.
+                 if you want to  create an indentations or a flowing white space .
+               you can use the  pre element. Now  the browser pays attention to the spacing, the line breaks and everything. 
+                 Pre and code are frequently combined to provide a way to show a block of code with indentation.
+        </p>
+            </li>
+            <li> 
+                <h3>Weird characters</h3>
+                <p>
+                    The less-than sign, the greater than sign and the ampersand are part of the characters that we use to write HTML. 
+                    So what happens when we want to use them in our content? 
+                     When you write a greater than or less than or ampersand symbol with spaces around it, it will show up as content.
+                      But if you start to write something that might look like an HTML element, it disappears. T
+                      he browser thinks it should do this as part of HTML instead of displaying it. 
+                      If you are writing inside a content management system like WordPress or using a tool like a markdown, 
+                      there's a chance that the layer between your text editor and the pure HTML will handle these characters for you just fine.
+Other times, you're going to need a way to handle this yourself. This is when we use what's called a character entity. Html entities are formatted like this. Ampersand, some kind of shortcode, and a semicolon. We type them into an HTML file and they get converted into the characters that we want. This is what we did in the demo for pre. Every instance of a greater than or less than symbol is written out as a corresponding character entity. The W3C keeps a reference chart of all the character entities where you can mark them up. Html entities can also be helpful for typing characters that aren't on your keyboard.
+
+                </p
+                ></li>
+          </ol>
+          <p></p>
+        </article>
+      </section>
+      <section class="main-section" id="CSS">
+        <header>CSS</header>
+        <article>
+            <ol>
+                <li>
+                    <h3>Inheritance and specificity</h3>
+                    <p>
+                        All of the descendant elements nested within the tag will inherit this style.
+                         This is much more efficient than directly applying the style to each element. 
+                         Some properties are not inheritable.
+                          The hierarchy is based on the selector type.
+                        The universal selector has the lowest specificity value,
+                         meaning that all other types of selectors will override it. 
+                         The only declarations the universal selector can override is inherited styles. In this example, the color declared by the universal selector overrides the color inherited from the section selector.
+                        A type selector will override the universal selector.
+                        And the class selector will override both the universal and the type selector.
+                        the ID selector overrides them all.
+                        
+                    </p>
+                </li>
+           
+                <li> 
+                    <h3>Working with media queries</h3>
+                    <p>
+                        <h4>There are four media types that we can target</h4> 
+<ol>
+    <li>all
+        <p>which means it's okay for all devices</p>
+    </li>
+    <li>print
+        <p>which is intended specifically for printed material.</p>
+    </li>
+    <li>screen
+        <p>which is simply a display screen</p>
+    </li>
+    <li>speech
+        <p> which is intended for things like screen readers.</p>
+    </li>
+</ol>                                           <code> @media only screen and (max-width: 600px) {
+                        body {
+                          background-color: lightblue; }
+                      }</code></p></li>
+            </ol>
+        </article>
+      </section>
+      <section class="main-section" id="Images_and_Figures">
+        <header>Images and Figures</header>
+        <article>
+            <ol>
+                <li>
+<h3>GIF and PNG: The format for line art</h3>
+    <p>
+        Which format should you use? If your line art needs animation you need GIF, otherwise use PNG, it's file sizes are comparable to GIF and it's far more versatile and powerful.
+    </p>         
+               </li>
+               <li>
+                <h3>JPEG: The format for photos</h3>
+                    <p>
+                        Unlike the line art formats, JPEG doesn't allow animation or transparent pixels. The compression JPEG uses is very different from PNG or GIF.  The JPEG file stores the factors, not the individual pixels. The better the quality, the bigger the file size. If you're going to be displaying on monitors with high resolution in pixel density, choose the highest quality you can.                     </p>         
+             </li>
+             <li>
+<h3>SVG: The format for vector line art</h3>
+<p>
+    SVG, however, doesn't store pixels. It stores images as a series of shapes to be drawn. The file consists of commands that tell the browser what geometric shapes to draw. It looks a lot like HTML. 
+    The browser is drawing the shapes with crisp edges no matter what sizes they're scaled to. That's the scalable part of SVG. This makes SVG a great choice for drawing icons and logos that have to look good at any size. You don't have to learn how to write SVG by hand. You can get programs that let you draw directly whatever you want. Here are a few choices. Adobe Illustrator as a commercial product. Or as Inkscape, Vectr, and Gravit Designer are all free.     </p>         
+              </li>
+
+
+            </ol>
+        </article>
+      </section>
+      <section class="main-section" id="Metadata_in_the_Head">
+        <header>Metadata in the Head</header>
+        <article>
+<ol>
+    <li>
+        <h3>Setting the viewport</h3>
+    
+    <p>
+So this viewport tag here is responsible for two characteristics of the viewport
+So in this particular case,
+ it's saying the width of the viewport should be set to
+  the width of the device. And we should scale that to 1.0,
+   meaning that we don't want to zoom in or zoom out, 
+   we're going to display it that way by default.
+But does it have to have those values? No, of course not, 
+we could have different values if you wish. </p>
+        <code> meta name="viewport" content="width=device-width, initial-scale=1.0"</code>
+   
+</li>
+   
+    <li>
+        <h3>Presenting your page to Facebook</h3>
+    
+    <p>
+        Facebook created a new way of including social information in the head of an HTML document and
+         its protocol has been set to be open-source, it's called the Open Graph data.
+And you can find lots of documentation about it online, notably in two places. One is  at the Facebook for Developers page and The Open Graph protocol website at ogp.me. </p>
+<p>
+these are meta tags, they can go anywhere in the head of the document, don't put them  before the character set here, the UTF-8, but they could go anywhere else in the head.</p> 
+<ol>
+    <li>
+        og:title
+        <p>that's the title of your object as it should appear. </p>
+    </li>
+    <li>
+        og:type
+        <p>So this is the type of your object and this is the type of resource that we're looking at. 
+            It could be music, it could be a video, an article, a book, a profile or a website. 
+        </p>
+    </li> 
+     <li>
+        og:url
+        <p>that's is the website URL. </p>
+    </li> 
+     <li>
+        og:image:alt
+                <p>   which is a description of what is in the image, not a caption. 
+                     if the page specifies an og:image it should also specify "an alt"
+                </p>
+    </li>
+</ol>
+ <p>remember that ultimately this is for sharing purposes on Facebook. 
+ So when people are sharing this specific webpage what is automatically going to be clickable on Facebook 
+ So you want to make sure you're linking to the exact page where you want people to click and go.
+    
+<code> property="og:title" content="HTML"
+    meta property="og:type" content="website" 
+meta property="og:url" content="" 
+    meta property="og:image" content="" 
+    meta property="og:image:alt" content=""
+</code></p>
+</li>
+    <li>
+        <h3>Creating identity for your pages with icons</h3>
+    
+    <p> Icons are another way to brand your website within the web browser. These might take the form of a favicon or as apple-touch-icons, depending on the browser and the device that you're using.
+         A favicon is the little picture you see in the corner of some webpages.
+         Let's go through making some of these icons together.
+          So, first of all, if you go to this website, this is [manytools.org](http://manytools.org/), 
+          and within this website they have an apple-touch-icon generator. 
+          So, there's two steps to this process. Step one is to actually create the icons that you're going to need,
+           and then step two is to integrate those into the website
+         So, what I would recommend doing is going ahead and clicking the Download button. That's going to download these icons into your directory as a ZIP file.
+           And, in my icons folder, I've got all of those icons that are available to me there.
+         if somebody tries to bookmark this website on an iPad on the desktop or on their iPhone on the desktop. '
+         This is all you're going to need. The device will be smart enough to choose which one of these icons is the right one.
+        The next thing I want to include is a favicon, and that's that little image that shows up in the corner of the tab of your web browser. 
+        And so, to do that, hop on back into my webpages here. There's a lot of favicon generators that are out there. 
+        I particularly like this one called [favicon.cc](http://favicon.cc/). This one gives you a screen here where you can draw a picture. 
+        You can choose colors over here on the side, draw on this, and it'll generate and icon for you. Or, you can also import an image.
+        
+        <code> rel="apple-touch-icon" href="img/touch-icon-iphone-60x60.png"
+            link rel="apple-touch-icon" sizes="60x60" href="img/touch-icon-ipad-76x76.png"
+            link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-iphone-retina-120x120.png"
+            link rel="apple-touch-icon" sizes="144x144" href="img/touch-icon-ipad-retina-152x152.png"
+        link rel="shortcut icon" href="img/favicon.ico" </code>
+       </p>
+    </li>
+
+</ol>  </article>
+      </section>
+    
+      <section class="main-section" id="Creating_Forms">
+        <header>Creating Forms</header>
+        <article>
+<ol>
+    
+    <li>
+        
+        <h3>Form submission and security</h3>
+        <h4>The form element has an action and method attribute which will determine how the data is sent to the server</h4>
+           <ol>
+               <li>
+                   <h5>the action attribute</h5>
+                   <p>
+                       This is where the data gets sent. It needs to be a valid URL either absolute or relative URL generally. It's not required to have an action and if you don't include one, the default is the current page.
+                    It's important to know whether the sending and receiving page have HTTPS. That's the secure protocol for sending data, but not all websites have it and you can tell by whether the URL of the website is HTTP or HTTPS.
+                    If both the sending and receiving page are HTTPS, then everything is encrypted as it's sent. That's the best way to go.
+                    If both the sending and receiving page are HTTP, the data is not encrypted. This is not recommended and definitely don't use this for any data that should be kept secure like personal information or passwords.
+                    If your sending page is HTTP, not secure, but the receiving page is HTTPS, then the data is encrypted.
+                    And if your sending page is secure, HTTPS, but the receiving page is HTTP, the data is not not encrypted. And further in this scenario, the browser will display a security warning message to the user advising the user that they should probably not submit their data.
+                </p>
+               </li>
+               <li>
+                <h5>the method attribute</h5>
+                <p>
+                    this is the HTTP method which is the way the data is transmitted. And commonly, this will be either get or post.
+                    <ul>
+                        <li>Get:
+
+<p>
+     means the browser is sending an HTTP request to ask for a resource with an empty body in the request. So essentially that means the data from the form is in the URL which is sent to the server or to a different page. The format is after the URL, you can see there is a question mark followed by the name of the form field equals and the value the user entered. So here we have color and the value is blue and there's design and the value is striped. If you have more than one to send, they're separated by an ampersand symbol. The user will be able to see this in the URL as the data is sent. There is a limit on how much information can be submitted as servers may limit the length of the URL. Don't use this method for sensitive data as it's possible to intercept data in the URL.
+
+</p>                        </li>
+<li>Post (more common):
+    <h6></h6>
+
+<p>
+    the browser sends an HTTP request to the server to ask for a response with the data in the body of the request rather than in the URL. This is the preferred method as it is much more secure. All the user will see is the URL that the data is being sent to and their data will not be visible. The server receiving the data will process the data and respond.
+                    After the server processes the data, it responds by sending information back to the user's computer. It may just tell the browser to display a particular resource page such as a confirmation page or it may return data based on the form entries.
+</p> </li>               
+                    </ul>
+                  </p>
+ </li>
+           </ol> 
+    </li>
+    <li>
+        <h3>Styling pseudo-classes</h3>
+        <p>A pseudo-class is a keyword that specifies a state of an element. You can use it to apply styles to an element with that state. There are several pseudo-classes you can use when styling forms.
+           <ol>
+               <li>Focus and Active</li>
+               <p>
+                Focus is triggered when a user clicks on, tabs, or taps into a field, and active, when a user activates a field, such as by clicking on a button.
+               </p>
+               <li>Enabled and Disabled</li>
+               <P> the disabled attribute you can add to a given field if you don't want the user to complete it, and every other field is going to be enabled by default.             </P>
+            <li>Checked and Selected</li> 
+            <P>Checked is when an option in radio buttons or checkboxes has been selected, and the selected pseudo-class is when an option in a select menu has been checked.
+            </P>
+            <LI>Valid and Invalid</LI>
+            <p>which refers to when the requirements for the field have been met. So, this is whether you, say, added a range for the field, if you've added anything else or you're saying you want a certain data in the field, and the browser will check and let you know whether it's valid or invalid.
+            </p>
+            <li>In-range and Out-of-range</li>
+             <p>these work similarly when you set a range for a numeric field and the value is within the range.
+                So, valid and invalid work for other things like pattern or step, in-range and out-of-range only work for range.
+            </p> 
+            <LI>Required and Optional</LI> <p>
+             refer to whether the required attribute has been set on a field.
+
+            </p>
+           </ol> 
+            </p>
+            <code>selector:pseudo-class {
+              property: value;
+            }</code>
+    </li>
+</ol>        </article>
+      </section>
+  
+    </main>
+  </body>
+</html>
